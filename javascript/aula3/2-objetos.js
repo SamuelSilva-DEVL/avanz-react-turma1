@@ -25,7 +25,7 @@ for(let chave in pessoa){
     console.log(chave);
 }
 
-
+//Destructuring
 const { nome, sobrenome } = pessoa;
 
 console.log(nome);

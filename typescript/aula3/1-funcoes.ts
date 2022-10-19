@@ -4,11 +4,16 @@
 // } 
 
 // função com  parâmetros
-function sum(x: number, y:number) {
+type Props = {
+    x:number;
+    y:number;
+}
+
+function Header({x, y}:Props) {
     return x + y;
 }
 
-sum(1, 6);
+Header({x: 1, y: 3});
 
 
 
@@ -37,4 +42,10 @@ sum(1, 6);
 
 // Arrows Functions ES6¨
 
- let minhaFuncao = (X, Y) => X+Y;
+ let minhaFuncao = (x: number, y:number): number => {
+    if(x>10){
+        return x+y;
+    }
+
+    return String(x+y);
+ };

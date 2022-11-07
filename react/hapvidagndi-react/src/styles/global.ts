@@ -8,5 +8,9 @@ export const GlobalStyle = createGlobalStyle`
 
     }
 
+    body {
+        font-family: ${(props) => props.theme.font.family}
+    }
+
     
 `

@@ -7,6 +7,7 @@ export const defaultTheme = {
     salmon: '#E89782',
     mainGreen: '#71BA3C',
     ctaBorder: '#F49800',
+    borderGray: '#C0C0C0',
     softPrimary: '#d9e6f4',
     alert: '#f14300',
     border: '#E0E0E0',

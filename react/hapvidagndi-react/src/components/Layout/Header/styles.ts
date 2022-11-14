@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const HeaderContainer = styled.header`
   width: 100%;
   height: 89px;
+  z-index: 2;
 `
 
 export const ButtonContrast = styled.button`

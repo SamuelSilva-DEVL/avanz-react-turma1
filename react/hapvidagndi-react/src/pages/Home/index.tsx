@@ -1,7 +1,13 @@
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 import Banner from '../../assets/banner_hapvida_1600x540.png'
-import { SectionContent, SectionNossosPlanos, SubTitle, Title } from './styles'
+import {
+  CardList,
+  SectionContent,
+  SectionNossosPlanos,
+  SubTitle,
+  Title,
+} from './styles'
 import { CardPlano } from '../../components/CardPlano'
 
 import Heart from '../../assets/heart_0.svg'
@@ -67,16 +73,18 @@ export function Home() {
         <SectionContent>
           <Title>Conheça nossos planos:</Title>
           <SubTitle>Planos para você e sua família.</SubTitle>
-          {planos.map((plano) => (
-            <CardPlano
-              key={plano.title}
-              image={plano.image}
-              title={plano.title}
-              description={plano.description}
-              link={plano.link}
-              lifes={plano.lifes}
-            />
-          ))}
+          <CardList>
+            {planos.map((plano) => (
+              <CardPlano
+                key={plano.title}
+                image={plano.image}
+                title={plano.title}
+                description={plano.description}
+                link={plano.link}
+                lifes={plano.lifes}
+              />
+            ))}
+          </CardList>
         </SectionContent>
       </SectionNossosPlanos>
     </>

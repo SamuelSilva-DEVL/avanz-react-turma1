@@ -5,7 +5,7 @@ import ArrowRight from '../../assets/right.svg'
 
 export const CardContainer = styled.div`
   height: 228px;
-  width: 100%;
+
   border-radius: 10px;
   padding: 15px;
   border: 1px solid ${(props) => props.theme.colors.borderGray};
@@ -16,6 +16,7 @@ export const CardContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 
   img {
     height: 45px;
@@ -28,6 +29,7 @@ export const InformationContent = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding-right: 8px;
 `
 
 export const LinkIcon = styled(Link)`

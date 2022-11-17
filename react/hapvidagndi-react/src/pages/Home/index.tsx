@@ -1,18 +1,27 @@
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
+// import YouTube from 'react-youtube'
 import Banner from '../../assets/banner_hapvida_1600x540.png'
-import {
-  CardList,
-  SectionContent,
-  SectionNossosPlanos,
-  SubTitle,
-  Title,
-} from './styles'
+import { CardList, CardNumberList, SubTitleVideo, TitleVideo } from './styles'
 import { CardPlano } from '../../components/CardPlano'
 
 import Heart from '../../assets/heart_0.svg'
 import HomeImage from '../../assets/home.svg'
 import Build from '../../assets/build.svg'
+import AccountGroup from '../../assets/account-group-outline.svg'
+import Marker from '../../assets/map-marker-outline.svg'
+import Hospital from '../../assets/hospital-building.svg'
+import HomeGroup from '../../assets/home-group-plus.svg'
+import Briefcase from '../../assets/briefcase.svg'
+import Flask from '../../assets/flask-outline.svg'
+import Charity from '../../assets/charity.svg'
+import GamePad from '../../assets/gamepad.svg'
+import Tooth from '../../assets/tooth-outline.svg'
+import BackGroundGirl from '../../assets/background-girl.jpeg'
+import { SectionDefault } from '../../components/SectionDefault'
+import { useTheme } from 'styled-components'
+import { CardNumbers } from '../../components/CardNumbers'
+import { YoutubeEmbed } from '../../components/YoutubeEmbed'
 
 const planos = [
   {
@@ -43,7 +52,64 @@ const planos = [
     link: 'institucional',
   },
 ]
+
+const numbers = [
+  {
+    image: AccountGroup,
+    title: '+15 Milhões',
+    subtitle: 'Clientes',
+  },
+  {
+    image: Marker,
+    title: '18 Estados',
+    subtitle: 'com Rede Própria',
+  },
+  {
+    image: Hospital,
+    title: '87 Hospitais',
+    subtitle: 'Disponíveis',
+  },
+  {
+    image: HomeGroup,
+    title: '77 Pronto',
+    subtitle: 'Atendimentos',
+  },
+  {
+    image: Briefcase,
+    title: '318 Centros',
+    subtitle: 'Clínicos',
+  },
+  {
+    image: Flask,
+    title: '269 Unidades',
+    subtitle: 'de Diagnóstico',
+  },
+  {
+    image: Charity,
+    title: '+68 Mil',
+    subtitle: 'Colaboradores',
+  },
+  {
+    image: GamePad,
+    title: '+27 Mil',
+    subtitle: 'Médicos',
+  },
+  {
+    image: Tooth,
+    title: '+33 Mil',
+    subtitle: 'Dentistas',
+  },
+]
 export function Home() {
+  const { colors } = useTheme()
+  // const opts = {
+  //   height: '480',
+  //   width: '853',
+  //   playerVars: {
+  //     // https://developers.google.com/youtube/player_parameters
+  //     autoplay: 1,
+  //   },
+  // }
   return (
     <>
       <Carousel showThumbs={false} showStatus={false}>
@@ -68,25 +134,51 @@ export function Home() {
           />,
         ]}
       </Carousel>
-      <SectionNossosPlanos>
-        <img src="" alt="" />
-        <SectionContent>
-          <Title>Conheça nossos planos:</Title>
-          <SubTitle>Planos para você e sua família.</SubTitle>
-          <CardList>
-            {planos.map((plano) => (
-              <CardPlano
-                key={plano.title}
-                image={plano.image}
-                title={plano.title}
-                description={plano.description}
-                link={plano.link}
-                lifes={plano.lifes}
-              />
-            ))}
-          </CardList>
-        </SectionContent>
-      </SectionNossosPlanos>
+      <SectionDefault
+        background={colors.bgGray}
+        borderColor="secondary"
+        title="Conheça nossos planos:"
+        subtitle="Planos para você e sua família."
+      >
+        <CardList>
+          {planos.map((plano) => (
+            <CardPlano
+              key={plano.title}
+              image={plano.image}
+              title={plano.title}
+              description={plano.description}
+              link={plano.link}
+              lifes={plano.lifes}
+            />
+          ))}
+        </CardList>
+      </SectionDefault>
+      <SectionDefault
+        background="#fff"
+        borderColor="primary"
+        title="Hapvida + NotreDame Intermédica juntas oferecem:"
+      >
+        <CardNumberList>
+          {numbers.map((num) => (
+            <CardNumbers
+              key={num.title}
+              image={num.image}
+              title={num.title}
+              subtitle={num.subtitle}
+            />
+          ))}
+        </CardNumberList>
+        <TitleVideo>Hapvida NotreDame Intermédica</TitleVideo>
+        <SubTitleVideo>
+          Mais saúde de qualidade, mais perto de você
+        </SubTitleVideo>
+        {/* <YouTube videoId="C4SEdvV7TxI" opts={opts} style={{ marginTop: 16 }} /> */}
+        <br />
+        <YoutubeEmbed videoId="C4SEdvV7TxI" />
+      </SectionDefault>
+      <SectionDefault backgroundImage={BackGroundGirl}>
+        <p>texto</p>
+      </SectionDefault>
     </>
   )
 }

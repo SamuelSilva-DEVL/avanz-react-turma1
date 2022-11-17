@@ -18,7 +18,7 @@ export const defaultTheme = {
     bgGlobal: '#FFF',
   },
   breakpoints: {
-    xs: '0px',
+    xs: '360px',
     sm: '576px',
     md: '768px',
     lg: '992px',

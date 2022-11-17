@@ -5,7 +5,6 @@ import ArrowRight from '../../assets/right.svg'
 
 export const CardContainer = styled.div`
   height: 228px;
-
   border-radius: 10px;
   padding: 15px;
   border: 1px solid ${(props) => props.theme.colors.borderGray};
@@ -43,6 +42,10 @@ export const Title = styled.span`
   font-size: 40px;
   color: ${(props) => props.theme.colors.primary};
   font-weight: bold;
+
+  @media (min-width: ${(props) => props.theme.breakpoints.xs}) {
+    font-size: 32px;
+  }
 `
 
 export const Lifes = styled.span`

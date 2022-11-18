@@ -2,8 +2,9 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 // import YouTube from 'react-youtube'
 import Banner from '../../assets/banner_hapvida_1600x540.png'
-import { CardList, CardNumberList, SubTitleVideo, TitleVideo } from './styles'
+import { CardList, CardNumberList, SubTitleVideo, TitleVideo, TitleBaner, SectionBaner, TitleSpan } from './styles'
 import { CardPlano } from '../../components/CardPlano'
+import { ButtonAction } from '../../components/Button/index'
 
 import Heart from '../../assets/heart_0.svg'
 import HomeImage from '../../assets/home.svg'
@@ -177,7 +178,10 @@ export function Home() {
         <YoutubeEmbed videoId="C4SEdvV7TxI" />
       </SectionDefault>
       <SectionDefault backgroundImage={BackGroundGirl}>
-        <p>texto</p>
+        <SectionBaner>
+          <TitleBaner><TitleSpan>Faça uma cotação</TitleSpan> e descubra como podemos ajudar você ou sua empresa a ter uma saúde de qualidade a preços acessíveis</TitleBaner>               
+        </SectionBaner>
+        <ButtonAction tittle="Solicitar proposta"/>
       </SectionDefault>
     </>
   )

@@ -55,3 +55,28 @@ export const SubTitleVideo = styled.p`
   font-size: 24px;
   font-weight: 400;
 `
+
+export const TitleBaner = styled.p`
+  color: ${(props) => props.theme.colors.gndiGray};
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0em;
+  text-align: center;
+`
+
+export const TitleSpan = styled.p`
+  color: ${(props) => props.theme.colors.ctaBorder};
+  font-weight: bold;
+`
+
+export const SectionBaner = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 350px;
+  height: 350px;
+  margin-left: 50px;
+`
+

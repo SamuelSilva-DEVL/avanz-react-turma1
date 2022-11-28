@@ -9,6 +9,7 @@ export const ButtonContainer = styled.div`
   padding: 0px;
   margin-left: 50px;
 `
+
 export const Button = styled.button`
   cursor: pointer;
   border-radius: 50rem;

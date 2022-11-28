@@ -4,6 +4,7 @@ interface ButtonActionProps{
   tittle: string
 }
 
+
 export function ButtonAction({tittle}:ButtonActionProps){
   return(
     <ButtonContainer>
